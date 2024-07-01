@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "jel-devsecops-bucket"
-    region         = "ap-northeast-1"
+    bucket         = "jel-devsecops-bucket-s"
+    region         = "ap-northeast-2"
     key            = "End-to-End-Kubernetes-DevSecOps-Tetris-Project/Jenkins-Server-TF/terraform.tfstate"
-    dynamodb_table = "jel-table-3"
+    dynamodb_table = "jel-table"
     encrypt        = true
   }
   required_version = ">=0.13.0"
