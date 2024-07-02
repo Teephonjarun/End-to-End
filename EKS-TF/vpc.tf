@@ -1,28 +1,28 @@
 data "aws_vpc" "vpc" {
   filter {
     name   = "tag:Name"
-    values = ["jenkins-vpccc"]
+    values = ["jenkins-vpcccc"]
   }
 }
 
 data "aws_internet_gateway" "igw" {
   filter {
     name   = "tag:Name"
-    values = ["jenkins-igwww"]
+    values = ["jenkins-igwwww"]
   }
 }
 
 data "aws_subnet" "subnet" {
   filter {
     name   = "tag:Name"
-    values = ["jenkins-subnettt"]
+    values = ["jenkins-subnetttt"]
   }
 }
 
 data "aws_security_group" "sg-default" {
   filter {
     name   = "tag:Name"
-    values = ["jenkins-sggg"]
+    values = ["jenkins-sgggg"]
   }
 }
 
