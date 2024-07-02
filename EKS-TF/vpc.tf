@@ -1,28 +1,28 @@
 data "aws_vpc" "vpc" {
   filter {
     name   = "tag:Name"
-    values = [var.vpc-name]
+    values = ["jenkins-vpccc"]
   }
 }
 
 data "aws_internet_gateway" "igw" {
   filter {
     name   = "tag:Name"
-    values = [var.igw-name]
+    values = ["jenkins-igwww"]
   }
 }
 
 data "aws_subnet" "subnet" {
   filter {
     name   = "tag:Name"
-    values = [var.subnet-name]
+    values = ["jenkins-subnettt"]
   }
 }
 
 data "aws_security_group" "sg-default" {
   filter {
     name   = "tag:Name"
-    values = [var.security-group-name]
+    values = ["jenkins-sggg"]
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_subnet" "public-subnet2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = var.subnet-name2
+    Name = "Jenkins-subnet2"
   }
 }
 
@@ -45,7 +45,7 @@ resource "aws_route_table" "rt2" {
   }
 
   tags = {
-    Name = var.rt-name2
+    Name = "Jjenkins-route-table2"
   }
 }
 
