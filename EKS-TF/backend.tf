@@ -3,7 +3,7 @@ terraform {
     bucket         = "jel-bg"
     region         = "ap-northeast-2"
     key            = "End-to-End-Kubernetes-DevSecOps-Tetris-Project/Jenkins-Server-TF/terraform.tfstate"
-    dynamodb_table = "jel-tabe"
+    dynamodb_table = "gel-table"
     encrypt        = true
   }
   required_version = ">=0.13.0"
