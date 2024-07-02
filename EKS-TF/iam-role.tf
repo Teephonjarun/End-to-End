@@ -1,5 +1,5 @@
 resource "aws_iam_role" "EKSClusterRole" {
-  name = "EKSClusterRole-jew"
+  name = "EKSClusterRole"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -15,7 +15,7 @@ resource "aws_iam_role" "EKSClusterRole" {
 }
 
 resource "aws_iam_role" "NodeGroupRole" {
-  name = "EKSNodeGroupRole-jew"
+  name = "EKSNodeGroupRole"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
